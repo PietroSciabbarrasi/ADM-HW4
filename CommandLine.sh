@@ -87,8 +87,8 @@ i=1
 #extracting the column 'duration'
 mlr --csv cut -o -f duration vodclickstream_uk_movies_03.csv | sed 1d | sort > duration_col.csv
 
-#remove 0.0 and -1.0 duration, in this way we consider the average of the actual views
-grep -i -v '\<0\.0\>' duration_col.csv | grep -i -v '\-1\.0' > dur_grep.csv
+#remove -1.0 values
+grep -i -v '\-1\.0' duration_col.csv > dur_grep.csv
 
 IFS=$'\n'
 
@@ -104,7 +104,7 @@ do
     p=$((p+1))
     
     #status bar
-    m=$((i%35038))
+    m=$((i%65000))
     if [ $m == 0 ]
     then
 	echo -n '#'
@@ -208,7 +208,7 @@ echo "$paint$blue                                                               
 echo "$paint$green    QUESTION 2: REPORT THE AVERAGE TIME BETWEEN SUBSEQUENT CLICKS ON NETFLIX.COM      $no_paint"
 echo "$paint$green  $no_paint                                                                                  $paint$green  $no_paint"
 echo "$paint$green  $no_paint The average time between subsequent clicks on Netflix.com is:                    $paint$green  $no_paint"
-echo "$paint$green  $no_paint "$average" s, hence about 18 hours                                                $paint$green  $no_paint"
+echo "$paint$green  $no_paint "$average" s, hence about 9 hours                                                 $paint$green  $no_paint"
 echo "$paint$green  $no_paint                                                                                  $paint$green  $no_paint"
 echo "$paint$green                                                                                      $no_paint"
 
