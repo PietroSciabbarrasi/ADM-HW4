@@ -6,6 +6,6 @@ This Repository is the submission of Group 18 for the ADM-HW4 of Data Science 20
 * CommandLine_output_screen.png : the screenshot of the command line question output
 ********
 ## Authors
-* Francesco Proietti
-* Pietro Sciabbarrasi
-* Tuba Siddiqui
+* Francesco Proietti    proietti.1873188@studenti.uniroma1.it
+* Pietro Sciabbarrasi   sciabbarrasi.1970875@studenti.uniroma1.it 
+* Tuba Siddiqui         Siddiqui.2047057@studenti.uniroma1.it
